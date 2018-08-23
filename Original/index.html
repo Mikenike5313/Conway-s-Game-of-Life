@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Conway's Game of Life</title>
+    <link rel="stylesheet" href="./style.css">
+  </head>
+  <body>
+
+    <div id="controls" oninput="update();">
+
+      <div id="mapMode">
+        <p>Map Mode:</p>
+        <input type="radio" name="mapMode" value="infinite" checked/> Infinite
+        <br>
+        <input type="radio" name="mapMode" value="toroidal"/> Toroidal
+        <br>
+      </div>
+
+      <div id="zoom">
+        <p>Zoom:</p>
+        <input type="range" min="4" max="20" value="10"/>
+      </div>
+
+      <div id="fps">
+        <p>Speed:</p>
+        <input type="range" min="1" max="60" value="5"/>
+      </div>
+
+      <div>
+        <p>Hotkeys:</p>
+        <p>
+          <strong>Spacebar</strong> to <i>pause/play</i>. <br><br>
+          <strong>Arrow keys</strong> to <i>move around</i>. (no extra space in toroidal mode) <br><br>
+          <strong>c</strong> to <i>clear</i>. <br><br>
+          <strong>e</strong> to <i>toggle erase mode</i>. <br><br>
+          <strong>o</strong> to <i>toggle grid</i>. <br><br>
+          <strong>p</strong> to open up prompt for <i>pattern drawing</i>. (very ugly I did this fast, only a few saved patterns) <br><br>
+          <strong>s</strong> to <i>save a snip</i>. (must have right clicked 2 points on the screen) <br><br>
+        </p>
+        <a href="http://www.conwaylife.com/ref/lexicon/lex.htm" target="_blank">More Patterns</a>
+        <p><strong>t</strong> to <i>translate patterns from this website</i>. (enter data below first)</p>
+        <textarea id="convertData" placeholder="Paste data here..."></textarea>
+      </div>
+
+    </div>
+
+    <canvas id="universe"></canvas>
+
+    <script src="./patterns.js"></script>
+    <script src="./script.js"></script>
+
+  </body>
+</html>

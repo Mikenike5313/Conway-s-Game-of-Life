@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  overflow: hidden;
+  display: inline-flex;
+}
+#controls {
+  box-sizing: border-box;
+  padding: 10px;
+  height: 100vh;
+  width: 20vw;
+}
+#convertData {
+  box-sizing: border-box;
+  width: 100%;
+}
+#universe {
+  background-color: black;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 80vw;
+  cursor: pointer;
+}
